@@ -1,14 +1,19 @@
-import {Image, View, StyleSheet} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 import {slidesData} from './data.types';
+import {SlideItem} from './slide-item';
+// import Carousel from 'react-native-reanimated-carousel';
 
 export const Slider = () => {
   return (
     <View style={styles.root}>
+      {/* <Carousel
+        loop
+        width={350}
+        data={slidesData}
+        renderItem={item => <SlideItem {...item.item} withAddButton />}
+      /> */}
       {slidesData.map((slide, key) => (
-        <View key={key} style={styles.slideItem}>
-          <Image source={slide.avatar} style={styles.avatar} />
-          <Image source={slide.background} style={styles.background} />
-        </View>
+        <SlideItem key={key} {...slide} withAddButton={key === 0} />
       ))}
     </View>
   );
@@ -20,28 +25,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     gap: 13,
     paddingHorizontal: 15,
-  },
-  slideItem: {
-    width: 152,
-    height: 73,
-    borderRadius: 17,
-    overflow: 'hidden',
-  },
-  background: {
-    position: 'absolute',
-    top: 0,
-    right: 0,
-    width: '100%',
-    height: '100%',
-    objectFit: 'cover',
-  },
-  avatar: {
-    position: 'absolute',
-    borderRadius: 12,
-    width: 23,
-    height: 23,
-    top: 8.5,
-    left: 12.5,
-    zIndex: 10,
+    marginVertical: 10,
   },
 });

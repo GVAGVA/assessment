@@ -3,7 +3,7 @@ interface Palette {
   secondary: string;
   grey: string;
   darkGrey: string;
-  gradientPrimary: ''
+  gradientPrimary: string[]
 }
 
 export const palette: Palette = {
@@ -11,5 +11,5 @@ export const palette: Palette = {
   secondary: '#CC141C',
   grey: '#808184',
   darkGrey: '#5C5858',
-  gradientPrimary: ''
+  gradientPrimary: ['#A079E5', '#5C4CF5']
 }
