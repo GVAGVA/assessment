@@ -25,6 +25,5 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     gap: 13,
     paddingHorizontal: 15,
-    marginVertical: 10,
   },
 });

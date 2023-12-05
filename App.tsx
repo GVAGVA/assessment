@@ -3,11 +3,7 @@ import {View, Text} from 'react-native';
 import {Navigation} from './navigation';
 
 function App(): JSX.Element {
-  return (
-    // <View>
-    <Navigation />
-    // </View>
-  );
+  return <Navigation />;
 }
 
 export default App;

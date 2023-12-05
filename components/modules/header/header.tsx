@@ -21,7 +21,8 @@ export const Header = () => {
           width: 36,
           height: 36,
           right: '50%',
-          transform: [{translateY: 18}],
+          bottom: 0,
+          transform: [{translateY: 16}],
         }}>
         <CircleDot
           style={{
@@ -73,6 +74,7 @@ const styles = StyleSheet.create({
     gap: 14,
     paddingVertical: 14,
     paddingHorizontal: 24,
+    backgroundColor: 'white',
   },
   avatar: {
     width: 40,
